@@ -56,7 +56,7 @@ async def echo(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb, row_width=1)
     #await bot.send_photo(photo='images/1000.jpg')
     await message.answer_photo(open(f"images/{var}.jpg", 'rb'))
-    await message.answer(f'Question {var} must be here', reply_markup=keyboard)
+    await message.answer(f'var} must be here', reply_markup=keyboard)
 
 
 
