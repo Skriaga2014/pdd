@@ -44,7 +44,7 @@ async def echo(message: types.Message):
     #for i in range(10):
     var = random.choice(list(q.keys()))
     #await message.answer(f"{var}/{list(q.keys())}")
-    vars = q[var][1]
+    vars = q[var][2]
     random.shuffle(vars)
 
     kb = [
@@ -56,7 +56,7 @@ async def echo(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb, row_width=1)
     #await bot.send_photo(photo='images/1000.jpg')
     await message.answer_photo(open(f"images/{var}.jpg", 'rb'))
-    await message.answer(f'var} must be here', reply_markup=keyboard)
+    await message.answer(q[var][1], reply_markup=keyboard)
 
 
 
